@@ -18,4 +18,4 @@ spec:
       - name: alpine
         image: alpine:3.12.0
         command: ["sleep"]
-        args: ["3600"]
+        args: ["36000"]
