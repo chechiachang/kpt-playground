@@ -5,9 +5,16 @@ metadata:
 upstream:
     type: git
     git:
-        commit: d144007aac6113821575c18373e4875ba35efcac
+        commit: 5b23c8b7ebf8f19b7c5d047b17d09b6ab476ff69
         repo: https://github.com/chechiachang/sleepybox
         directory: /
         ref: master
 packageMetadata:
     shortDescription: A sleepy box
+openAPI:
+    definitions:
+        io.k8s.cli.setters.replicas:
+            x-k8s-cli:
+                setter:
+                    name: replicas
+                    value: 1 -> 3
