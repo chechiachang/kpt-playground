@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sleepybox-deployment
+  labels:
+    app: sleepybox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sleepybox
+  template:
+    metadata:
+      labels:
+        app: sleepybox
+    spec:
+      containers:
+      - name: alpine
+        image: alpine:3.12.0
+        command: ["sleep"]
+        args: ["3600"]

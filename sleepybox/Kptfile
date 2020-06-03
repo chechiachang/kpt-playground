@@ -1,0 +1,13 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: sleepybox
+upstream:
+    type: git
+    git:
+        commit: d144007aac6113821575c18373e4875ba35efcac
+        repo: https://github.com/chechiachang/sleepybox
+        directory: /
+        ref: master
+packageMetadata:
+    shortDescription: A sleepy box
