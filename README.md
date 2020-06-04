@@ -29,3 +29,9 @@ set 1 fields
 kpt live init sleepybox # init configmap
 kpt live diff
 ```
+
+# Update
+
+```
+kpt pkg update sleepybox@0.0.2 --strategy=resource-merge
+```

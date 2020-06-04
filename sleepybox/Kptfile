@@ -1,27 +1,27 @@
 apiVersion: kpt.dev/v1alpha1
 kind: Kptfile
 metadata:
-  name: sleepybox
+    name: sleepybox
 upstream:
-  type: git
-  git:
-    commit: 5b23c8b7ebf8f19b7c5d047b17d09b6ab476ff69
-    repo: https://github.com/chechiachang/sleepybox
-    directory: /
-    ref: master
+    type: git
+    git:
+        commit: 5b23c8b7ebf8f19b7c5d047b17d09b6ab476ff69
+        repo: https://github.com/chechiachang/sleepybox
+        directory: /
+        ref: master
 packageMetadata:
-  shortDescription: A sleepy box
+    shortDescription: A sleepy box
 openAPI:
-  definitions:
-    io.k8s.cli.setters.alpine-image:
-      x-k8s-cli:
-        setter:
-          name: alpine-image
-          value: alpine:3.12.0
-    io.k8s.cli.setters.replicas:
-      x-k8s-cli:
-        setter:
-          name: replicas
-          value: "2"
-          setBy: david
-      description: Two time more sleepy
+    definitions:
+        io.k8s.cli.setters.alpine-image:
+            x-k8s-cli:
+                setter:
+                    name: alpine-image
+                    value: alpine:3.12.0
+        io.k8s.cli.setters.replicas:
+            description: Two time more sleepy
+            x-k8s-cli:
+                setter:
+                    name: replicas
+                    setBy: david
+                    value: "2"
