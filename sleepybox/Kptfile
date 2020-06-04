@@ -5,16 +5,21 @@ metadata:
 upstream:
     type: git
     git:
-        commit: 4bdab6bcae08ef72a09072af7df01be7891ef0a7
+        commit: 04c6409425fb4037746f54bc942b16ca72ae6ab2
         repo: git@gitlab.silkrode.com.tw:team_devops/kpt-pkg.git
         directory: sleepybox
-        ref: 0.0.1
+        ref: master
 packageMetadata:
     tags:
       - kpt.dev/app=nginx
     shortDescription: kpt sleepybox package
 openAPI:
     definitions:
+        io.k8s.cli.setters.TAG_SETTER:
+            x-k8s-cli:
+                setter:
+                    name: TAG_SETTER
+                    value: 3.12.0
         io.k8s.cli.setters.alpine-image:
             x-k8s-cli:
                 setter:
@@ -27,3 +32,11 @@ openAPI:
                     name: replicas
                     setBy: david
                     value: "2"
+        io.k8s.cli.substitutions.image-value:
+            x-k8s-cli:
+                substitution:
+                    name: image-value
+                    pattern: alpine:${TAG_SETTER}
+                    values:
+                      - marker: ${TAG_SETTER}
+                        ref: '#/definitions/io.k8s.cli.setters.TAG_SETTER'
