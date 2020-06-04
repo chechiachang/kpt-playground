@@ -23,6 +23,10 @@ kpt cfg set ${DIR} replicas 5
 set 1 fields
 ```
 
+# Substitution
+
+
+
 # Apply
 
 ```

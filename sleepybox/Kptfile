@@ -5,10 +5,10 @@ metadata:
 upstream:
     type: git
     git:
-        commit: 70f5b966fdff5d6169366b7720d237038a5e5c21
-        repo: https://github.com/chechiachang/sleepybox
-        directory: /
-        ref: 0.0.2
+        commit: 4bdab6bcae08ef72a09072af7df01be7891ef0a7
+        repo: git@gitlab.silkrode.com.tw:team_devops/kpt-pkg.git
+        directory: sleepybox
+        ref: 0.0.1
 packageMetadata:
     shortDescription: A sleepy box
 openAPI:
