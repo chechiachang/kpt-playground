@@ -1,7 +1,9 @@
 Kpt playground
 ===
 
-# Get
+# PKG User
+
+Get
 
 ```
 PKG=https://github.com/kubernetes/examples/staging/cockroachdb
@@ -9,7 +11,7 @@ DIR=cockroachdb
 kpt pkg get ${PKG} ${DIR}
 ```
 
-# Set
+Set
 
 ```
 DIR=cockroachdb
@@ -23,25 +25,34 @@ kpt cfg set ${DIR} replicas 5
 set 1 fields
 ```
 
-# Substitution
-
-
-
-# Apply
+Apply
 
 ```
 kpt live init sleepybox # init configmap
 kpt live diff
 ```
 
-# Update
+Update
 
 ```
 kpt pkg update sleepybox@0.0.2 --strategy=resource-merge
 ```
 
-# Function
+Function
 
 ```
 kpt fn run --image gcr.io/kpt-functions/label-namespace . -- label_name=color label_value=orange
+```
+
+---
+
+# PKG Provider
+
+Substitution
+
+```
+kpt cfg create-subst sleepybox image-value --field-value alpine:3.12.0 --pattern alpine:\${TAG_SETTER}
+unable to find setter with name TAG_SETTER, creating new setter with value 3.12.0
+
+kpt cfg set sleepybox TAG_SETTER 1.8.1
 ```
