@@ -16,6 +16,8 @@ spec:
     spec:
       containers:
       - name: alpine
-        image: alpine:3.12.0 # {"$ref":"#/definitions/io.k8s.cli.setters.alpine-image"}
-        command: ["sleep"]
-        args: ["36000"]
+        image: 'alpine:3.12.0' # {"$ref":"#/definitions/io.k8s.cli.setters.alpine-image"}
+        command:
+        - sleep
+        args:
+        - '36000'

@@ -35,3 +35,9 @@ kpt live diff
 ```
 kpt pkg update sleepybox@0.0.2 --strategy=resource-merge
 ```
+
+# Function
+
+```
+kpt fn run --image gcr.io/kpt-functions/label-namespace . -- label_name=color label_value=orange
+```
