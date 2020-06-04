@@ -56,3 +56,8 @@ unable to find setter with name TAG_SETTER, creating new setter with value 3.12.
 
 kpt cfg set sleepybox TAG_SETTER 1.8.1
 ```
+
+Blueprint
+```
+kpt pkg get https://github.com/GoogleContainerTools/kpt.git/package-examples/mysql-kustomize mysql
+```
