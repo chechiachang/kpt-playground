@@ -5,10 +5,10 @@ metadata:
 upstream:
     type: git
     git:
-        commit: 5b23c8b7ebf8f19b7c5d047b17d09b6ab476ff69
+        commit: 70f5b966fdff5d6169366b7720d237038a5e5c21
         repo: https://github.com/chechiachang/sleepybox
         directory: /
-        ref: master
+        ref: 0.0.2
 packageMetadata:
     shortDescription: A sleepy box
 openAPI:
