@@ -22,3 +22,10 @@ kpt cfg list-setters ${DIR} --set-by david --description "Increase replicas to 5
 kpt cfg set ${DIR} replicas 5
 set 1 fields
 ```
+
+# Apply
+
+```
+kpt live init sleepybox # init configmap
+kpt live diff
+```
