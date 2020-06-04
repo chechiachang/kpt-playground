@@ -10,7 +10,9 @@ upstream:
         directory: sleepybox
         ref: 0.0.1
 packageMetadata:
-    shortDescription: A sleepy box
+    tags:
+      - kpt.dev/app=nginx
+    shortDescription: kpt sleepybox package
 openAPI:
     definitions:
         io.k8s.cli.setters.alpine-image:
