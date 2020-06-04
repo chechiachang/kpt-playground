@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sleepybox
 spec:
-  replicas: 1
+  replicas: 1 # {"$ref":"#/definitions/io.k8s.cli.setters.replicas"}
   selector:
     matchLabels:
       app: sleepybox
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: alpine
-        image: alpine:3.12.0
+        image: alpine:3.12.0 # {"$ref":"#/definitions/io.k8s.cli.setters.alpine-image"}
         command: ["sleep"]
         args: ["36000"]
